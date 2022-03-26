@@ -1,0 +1,34 @@
+<div class="wrapper">
+	<div class="currency first-currency">
+		<mat-form-field appearance="fill">
+			<mat-label>Currency</mat-label>
+			<mat-select>
+				<mat-option value="usd">USD</mat-option>
+				<mat-option value="eur">EUR</mat-option>
+				<mat-option value="uah">UAH</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field appearance="fill">
+			<mat-label>Value</mat-label>
+			<input matInput class="currency__input" />
+		</mat-form-field>
+	</div>
+	<button mat-icon-button color="primary" aria-label="Example icon button with a compare_arrows">
+		<span class="material-icons"> compare_arrows </span>
+	</button>
+	<div class="currency second-currency">
+		<mat-form-field appearance="fill">
+			<mat-label>Currency</mat-label>
+			<mat-select>
+				<mat-option value="usd">USD</mat-option>
+				<mat-option value="eur">EUR</mat-option>
+				<mat-option value="uah">UAH</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field appearance="fill">
+			<mat-label>Value</mat-label>
+			<input matInput />
+		</mat-form-field>
+	</div>
+</div>
+<button type="button" (click)="onClick()">On click</button>
