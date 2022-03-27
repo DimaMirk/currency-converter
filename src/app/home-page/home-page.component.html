@@ -2,15 +2,15 @@
 	<div class="currency first-currency">
 		<mat-form-field appearance="fill">
 			<mat-label>Currency</mat-label>
-			<mat-select>
-				<mat-option value="usd">USD</mat-option>
-				<mat-option value="eur">EUR</mat-option>
-				<mat-option value="uah">UAH</mat-option>
+			<mat-select [(ngModel)]="valTwoInt">
+				<mat-option value="USD">USD</mat-option>
+				<mat-option value="EUR">EUR</mat-option>
+				<mat-option value="UAH">UAH</mat-option>
 			</mat-select>
 		</mat-form-field>
 		<mat-form-field appearance="fill">
 			<mat-label>Value</mat-label>
-			<input matInput class="currency__input" />
+			<input (input)="getInpValue($event)" matInput id="inpOne" type="number" />
 		</mat-form-field>
 	</div>
 	<button mat-icon-button color="primary" aria-label="Example icon button with a compare_arrows">
@@ -19,16 +19,23 @@
 	<div class="currency second-currency">
 		<mat-form-field appearance="fill">
 			<mat-label>Currency</mat-label>
-			<mat-select>
-				<mat-option value="usd">USD</mat-option>
-				<mat-option value="eur">EUR</mat-option>
-				<mat-option value="uah">UAH</mat-option>
+			<mat-select [(ngModel)]="valOneInt">
+				<mat-option value="USD">USD</mat-option>
+				<mat-option value="EUR">EUR</mat-option>
+				<mat-option value="UAH">UAH</mat-option>
 			</mat-select>
 		</mat-form-field>
 		<mat-form-field appearance="fill">
 			<mat-label>Value</mat-label>
-			<input matInput />
+			<input
+				matInput
+				(input)="getInpValue($event)"
+				matInput
+				id="inpTwo"
+				type="number"
+				[(ngModel)]="resultValInpTwo"
+				value="resultValInpTwo" />
 		</mat-form-field>
 	</div>
 </div>
-<button type="button" (click)="onClick()">On click</button>
+<button (click)="onClick()">Click</button>
