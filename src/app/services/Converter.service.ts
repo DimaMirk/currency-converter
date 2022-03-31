@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core'
 import CurrencyFactory from '../classes/CurrencyFactory'
-import { CurentCurrencyService } from './curent-currency.service'
 
 @Injectable({
 	providedIn: 'root'
